@@ -8,11 +8,20 @@
         "dev": "nodemon --watch src --ext ts --exec tsx src/app.ts",
         "watch:build": "tsc --build --force --verbose --watch",
         "knex:dev": "tsx src/utils/knex.ts",
-
         "build": "tsc --allowJs",
         "start": "node dist/app.js",
         "knex": "node dist/utils/knex.js",
-        
+        "test:api": "tsx src/tests/test-api.ts",
+        "test:mock": "tsx src/tests/test-mock.ts",
+        "test:scheduler": "tsx src/tests/test-scheduler.ts",
+        "test:config": "tsx src/tests/test-config.ts",
+        "test:all": "tsx src/tests/test-all.ts",
+        "test:google-sheets": "tsx src/tests/test-google-sheets.ts",
+        "test:google-sheets-data": "tsx src/tests/test-google-sheets-with-data.ts",
+        "test:google-sheets-existing": "tsx src/tests/test-google-sheets-existing.ts",
+        "update-spreadsheet-id": "tsx src/tests/update-spreadsheet-id.ts",
+        "test:full-export": "tsx src/tests/test-full-export.ts",
+        "test:export-with-data": "tsx src/tests/test-export-with-data.ts",
         "tsc:check": "tsc --allowJs --noEmit",
         "prettier": "prettier --config .prettierrc.json src/**/*.js --check",
         "prettier-format": "prettier --config .prettierrc.json src/**/*.js --write",
@@ -31,12 +40,14 @@
     "author": "lucard17",
     "license": "ISC",
     "dependencies": {
+        "axios": "^1.10.0",
         "commander": "^13.1.0",
         "dotenv": "^16.3.1",
         "googleapis": "^144.0.0",
         "knex": "^3.0.1",
         "log4js": "^6.9.1",
         "pg": "^8.11.3",
+        "tsx": "^4.20.3",
         "zod": "^3.23.8"
     },
     "devDependencies": {

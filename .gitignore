@@ -2,3 +2,7 @@ node_modules
 .local
 .env
 dist
+logs/
+*.log
+credentials/*.json
+!credentials/*.example.json
